@@ -24,8 +24,7 @@ class Login1Page extends StatelessWidget {
                     height: 60,
                     decoration: BoxDecoration(
                         color: kSecondaryColorLogin1,
-                        borderRadius: BorderRadius.circular(14.0)
-                    ),
+                        borderRadius: BorderRadius.circular(14.0)),
                   ),
                 ),
               ),
@@ -37,16 +36,15 @@ class Login1Page extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
-                children:[
+                children: [
                   SizedBox(
                     height: 40.0,
                   ),
                   Container(
                     padding: EdgeInsets.all(16.0),
                     decoration: BoxDecoration(
-                      color: kSecondaryColorLogin1.withOpacity(0.16),
-                      shape: BoxShape.circle
-                    ),
+                        color: kSecondaryColorLogin1.withOpacity(0.16),
+                        shape: BoxShape.circle),
                     child: Icon(
                       Icons.home_filled,
                       color: kSecondaryColorLogin1,
@@ -75,11 +73,37 @@ class Login1Page extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: SizedBox(
+                          height: 50.0,
+                          child: ElevatedButton.icon(
+                            onPressed: (){},
+                            icon: Icon(Icons.add),
+                            label: Text("Google",),
+                          ),
+                        ),
+                      ),
+                      const SizedBox(
+                        width: 16.0,
+                      ),
+                      Expanded(
+                        child: SizedBox(
+                          height: 50.0,
+                          child: ElevatedButton.icon(
+                            onPressed: (){},
+                            icon: Icon(Icons.add),
+                            label: Text("Google",),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
                 ],
               ),
             ),
           ),
-
         ],
       ),
     );
