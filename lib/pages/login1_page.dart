@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:codigo2_ui_stack/pages/login2_page.dart';
 import 'package:codigo2_ui_stack/ui/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -215,7 +216,9 @@ class Login1Page extends StatelessWidget {
                           )
                         ),
                         child: Text("Sign Up"),
-                        onPressed: (){},
+                        onPressed: (){
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> Login2Page()));
+                        },
                       ),
                     ),
 
