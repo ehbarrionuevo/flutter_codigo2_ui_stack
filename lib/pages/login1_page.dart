@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:codigo2_ui_stack/ui/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class Login1Page extends StatelessWidget {
@@ -73,15 +74,29 @@ class Login1Page extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                     ),
                   ),
+                  const SizedBox(
+                    height: 36.0,
+                  ),
                   Row(
                     children: [
                       Expanded(
                         child: SizedBox(
                           height: 50.0,
                           child: ElevatedButton.icon(
-                            onPressed: (){},
-                            icon: Icon(Icons.add),
-                            label: Text("Google",),
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Color(0xffEA4335),
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                            ),
+                            icon: SvgPicture.asset(
+                              'assets/images/google.svg',
+                              color: Colors.white,
+                            ),
+                            label: Text(
+                              "Google",
+                            ),
                           ),
                         ),
                       ),
@@ -92,14 +107,98 @@ class Login1Page extends StatelessWidget {
                         child: SizedBox(
                           height: 50.0,
                           child: ElevatedButton.icon(
-                            onPressed: (){},
-                            icon: Icon(Icons.add),
-                            label: Text("Google",),
+                            onPressed: () {},
+                            style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blue,
+                              shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(12.0),
+                              ),
+                            ),
+                            icon: SvgPicture.asset(
+                              'assets/images/facebook.svg',
+                              color: Colors.white,
+                            ),
+                            label: Text(
+                              "Facebook",
+                            ),
                           ),
                         ),
                       ),
                     ],
                   ),
+
+                  const SizedBox(
+                    height: 36.0,
+                  ),
+
+                  TextField(
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 16.0),
+                      hintText: "Username",
+                      hintStyle: const TextStyle(
+                        color: Colors.white70,
+                        fontSize: 14.0
+                      ),
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.06),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                        borderSide: BorderSide.none,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 18.0,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 16.0),
+                      hintText: "Email Address",
+                      hintStyle: const TextStyle(
+                          color: Colors.white70,
+                          fontSize: 14.0
+                      ),
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.06),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                        borderSide: BorderSide.none,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 18.0,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
+                      contentPadding: const EdgeInsets.symmetric(horizontal: 18.0, vertical: 16.0),
+                      hintText: "Password",
+                      hintStyle: const TextStyle(
+                          color: Colors.white70,
+                          fontSize: 14.0
+                      ),
+                      filled: true,
+                      fillColor: Colors.white.withOpacity(0.06),
+                      focusedBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                        borderSide: BorderSide.none,
+                      ),
+                      enabledBorder: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(12.0),
+                        borderSide: BorderSide.none,
+                      ),
+                    ),
+                  ),
+
+
                 ],
               ),
             ),
