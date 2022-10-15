@@ -20,14 +20,20 @@ class Login2Page extends StatelessWidget {
                 top: -50,
                 child: CircleWidget(
                   radius: 120,
-                  color: Color(0xffD94E8E),
+                  colors: [
+                    Color(0xffD94E8E),
+                    Color(0xffE98DB7),
+                  ],
                 ),
               ),
               Positioned(
                 bottom: -70,
                 child: CircleWidget(
                   radius: 200,
-                  color: Color(0xff564293),
+                  colors: [
+                    Color(0xff564293),
+                    Color(0xff9D8AD9),
+                  ],
                 ),
               ),
             ],

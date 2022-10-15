@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 class CircleWidget extends StatelessWidget {
 
   double radius;
-  Color color;
-  CircleWidget({required this.radius, required this.color});
+  List<Color> colors;
+  CircleWidget({required this.radius, required this.colors});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class CircleWidget extends StatelessWidget {
         color: Colors.blue,
         boxShadow: [
           BoxShadow(
-            color: color.withOpacity(0.65),
+            color: colors[0].withOpacity(0.4),
             blurRadius: 12.0,
             offset: Offset(0,5)
           ),
@@ -26,10 +26,7 @@ class CircleWidget extends StatelessWidget {
         gradient: LinearGradient(
           begin: Alignment.centerRight,
           end: Alignment.centerLeft,
-          colors: [
-            color,
-            color.withOpacity(0.4),
-          ],
+          colors: colors,
         ),
       ),
     );
