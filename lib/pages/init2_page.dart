@@ -1,3 +1,4 @@
+import 'package:codigo2_ui_stack/pages/challenge1_page.dart';
 import 'package:flutter/material.dart';
 
 class Init2Page extends StatelessWidget {
@@ -24,7 +25,7 @@ class Init2Page extends StatelessWidget {
         image: DecorationImage(
           fit: BoxFit.cover,
           image: NetworkImage(
-            "https://images.pexels.com/photos/2499802/pexels-photo-2499802.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/3264723/pexels-photo-3264723.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
           ),
         ),
       ),
@@ -111,7 +112,11 @@ class Init2Page extends StatelessWidget {
                     height: 54.0,
                     width: double.infinity,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+
+                        Navigator.push(context, MaterialPageRoute(builder: (context)=> Challenge1Page()));
+
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.black,
                         shape: RoundedRectangleBorder(
