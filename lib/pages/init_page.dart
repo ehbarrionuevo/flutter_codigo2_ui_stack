@@ -4,7 +4,7 @@ class InitPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.white,
       body: Column(
         children: [
           // Image.network(
@@ -13,36 +13,45 @@ class InitPage extends StatelessWidget {
           // ),
           Expanded(
             flex: 1,
-            child: Container(color: Colors.blue),
+            child: Container(
+              alignment: Alignment.center,
+              // color: Colors.red,
+              child: Image.network(
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZngnAhtwOY6uEDEiusgFnyHupw9sV87PqCQ&usqp=CAU",
+                height: 200,
+                width: 200,
+              ),
+            ),
           ),
           Container(
-            padding: EdgeInsets.symmetric(vertical: 50.0, horizontal: 16.0),
+            padding:
+                const EdgeInsets.symmetric(vertical: 50.0, horizontal: 16.0),
             width: double.infinity,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               color: Color(0xffFFB901),
               borderRadius: BorderRadius.only(
-                topRight: Radius.circular(24),
-                topLeft: Radius.circular(24),
+                topRight: Radius.circular(30),
+                topLeft: Radius.circular(30),
               ),
             ),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Welcome",
                   style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 8.0,
                 ),
-                Text(
+                const Text(
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 14.0,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 38.0,
                 ),
                 Row(
@@ -64,7 +73,7 @@ class InitPage extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 10.0,
                     ),
                     Expanded(
