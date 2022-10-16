@@ -12,7 +12,7 @@ class Challenge1Page extends StatelessWidget {
       body: Stack(
         children: [
           Image.network(
-            "https://images.pexels.com/photos/4545333/pexels-photo-4545333.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+            "https://images.pexels.com/photos/2531728/pexels-photo-2531728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
             height: height * 0.5,
             width: double.infinity,
             fit: BoxFit.cover,
@@ -20,9 +20,15 @@ class Challenge1Page extends StatelessWidget {
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
-              color: Colors.blue,
               width: double.infinity,
               padding: EdgeInsets.all(22.0),
+              decoration: BoxDecoration(
+                color: Colors.black.withOpacity(0.74),
+                borderRadius: BorderRadius.only(
+                  topRight: Radius.circular(32.0),
+                  topLeft: Radius.circular(32.0)
+                ),
+              ),
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -62,6 +68,9 @@ class Challenge1Page extends StatelessWidget {
               ),
             ),
           ),
+
+
+
         ],
       ),
     );
