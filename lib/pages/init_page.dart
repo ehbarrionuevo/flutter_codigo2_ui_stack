@@ -30,10 +30,7 @@ class InitPage extends StatelessWidget {
               children: [
                 Text(
                   "Welcome",
-                  style: TextStyle(
-                    fontSize: 30.0,
-                    fontWeight: FontWeight.bold
-                  ),
+                  style: TextStyle(fontSize: 30.0, fontWeight: FontWeight.bold),
                 ),
                 SizedBox(
                   height: 8.0,
@@ -42,10 +39,56 @@ class InitPage extends StatelessWidget {
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
                   style: TextStyle(
                     fontWeight: FontWeight.bold,
-                    fontSize: 13.0,
+                    fontSize: 14.0,
                   ),
                 ),
-
+                SizedBox(
+                  height: 38.0,
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: SizedBox(
+                        height: 52,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.black,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(40.0),
+                            ),
+                          ),
+                          child: Text(
+                            "Sign in",
+                          ),
+                        ),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 10.0,
+                    ),
+                    Expanded(
+                      child: SizedBox(
+                        height: 52,
+                        child: ElevatedButton(
+                          onPressed: () {},
+                          style: ElevatedButton.styleFrom(
+                            backgroundColor: Colors.white,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(40.0),
+                            ),
+                          ),
+                          child: Text(
+                            "Sign up",
+                            style: TextStyle(
+                              color: Colors.black,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
               ],
             ),
           ),
