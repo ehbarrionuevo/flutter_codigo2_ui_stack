@@ -1,3 +1,4 @@
+import 'package:codigo2_ui_stack/pages/init2_page.dart';
 import 'package:flutter/material.dart';
 
 class InitPage extends StatelessWidget {
@@ -60,7 +61,9 @@ class InitPage extends StatelessWidget {
                       child: SizedBox(
                         height: 52,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> Init2Page()));
+                          },
                           style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.black,
                             shape: RoundedRectangleBorder(
