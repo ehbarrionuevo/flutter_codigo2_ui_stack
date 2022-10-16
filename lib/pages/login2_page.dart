@@ -1,3 +1,4 @@
+import 'package:codigo2_ui_stack/pages/init_page.dart';
 import 'package:codigo2_ui_stack/widgets/circle_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -78,32 +79,38 @@ class Login2Page extends StatelessWidget {
                   SizedBox(
                     height: 20.0,
                   ),
-                  Container(
-                    height: 56.0,
-                    width: double.infinity,
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(40.0),
-                      boxShadow: [
-                        BoxShadow(
-                            color: const Color(0xffD94E8E).withOpacity(0.65),
-                            offset: const Offset(0, 4),
-                            blurRadius: 12.0),
-                      ],
-                      gradient: const LinearGradient(
-                        colors:  [
-                          Color(0xffE98DB7),
-                          Color(0xffD94E8E),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(40.0),
+                    child: Container(
+                      height: 56.0,
+                      width: double.infinity,
+                      decoration: BoxDecoration(
+                        //borderRadius: BorderRadius.circular(40.0),
+                        boxShadow: [
+                          BoxShadow(
+                              color: const Color(0xffD94E8E).withOpacity(0.65),
+                              offset: const Offset(0, 4),
+                              blurRadius: 12.0),
                         ],
+                        gradient: const LinearGradient(
+                          colors:  [
+                            Color(0xffE98DB7),
+                            Color(0xffD94E8E),
+                          ],
+                        ),
                       ),
-                    ),
-                    child: MaterialButton(
-                      child: Text(
-                        "Create Account",
+                      child: MaterialButton(
+                        child: Text(
+                          "Create Account",
+                        ),
+                        textColor: Colors.white,
+                        // shape: RoundedRectangleBorder(
+                        //     borderRadius: BorderRadius.circular(40.0),
+                        // ),
+                        onPressed: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> InitPage()));
+                        },
                       ),
-                      textColor: Colors.white,
-                      shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(40.0)),
-                      onPressed: () {},
                     ),
                   ),
                 ],
