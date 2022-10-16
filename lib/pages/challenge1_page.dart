@@ -11,19 +11,41 @@ class Challenge1Page extends StatelessWidget {
       backgroundColor: Colors.black,
       body: Stack(
         children: [
-          Image.network(
-            "https://images.pexels.com/photos/2531728/pexels-photo-2531728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+
+          Container(
             height: height * 0.5,
             width: double.infinity,
-            fit: BoxFit.cover,
+            child: Stack(
+              children: [
+                Image.network(
+                  "https://images.pexels.com/photos/2531728/pexels-photo-2531728.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                  height: height * 0.5,
+                  width: double.infinity,
+                  fit: BoxFit.cover,
+                ),
+                Container(
+                  decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                      begin: Alignment.bottomCenter,
+                      end: Alignment.center,
+                      colors: [
+                        Colors.black,
+                        Colors.transparent,
+                      ],
+                    ),
+                  ),
+                )
+              ],
+            ),
           ),
+
           Align(
             alignment: Alignment.bottomCenter,
             child: Container(
               width: double.infinity,
               padding: EdgeInsets.all(22.0),
               decoration: BoxDecoration(
-                color: Colors.black.withOpacity(0.74),
+                color: Colors.black.withOpacity(0.65),
                 borderRadius: BorderRadius.only(
                   topRight: Radius.circular(32.0),
                   topLeft: Radius.circular(32.0)
@@ -68,8 +90,6 @@ class Challenge1Page extends StatelessWidget {
               ),
             ),
           ),
-
-
 
         ],
       ),
